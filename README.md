@@ -5,9 +5,10 @@ This is a really simple script. It works with objects stored in JSON files, that
 
 I18n should be added at the moment you start Vue (commonly in 'main.js')
         
-    import  Vue  from  'vue'
-    import  App  from  './App.vue'
-    import  I18n, { i18nMixin } from  "./I18n"
+    import Vue from 'vue'
+    import App from './App.vue'
+    import store from './store'
+    import I18n, { i18nMixin } from "./I18n"
     
     Vue.use(I18n);
     Vue.mixin(i18nMixin);
@@ -15,6 +16,7 @@ I18n should be added at the moment you start Vue (commonly in 'main.js')
     Vue.config.productionTip = false
 
     new  Vue({
+        store,
         render:  h  =>  h(App)
     }).$mount('#app')
 
