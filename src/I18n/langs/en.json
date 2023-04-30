@@ -1,0 +1,6 @@
+{
+    "language_name": "English",
+    "intro1": "I18n is really simple. It works with objects stored in JSON files, that use the string itself as index, so you can preserve the legibility of your code.",
+    "applesSample": "No apples | One apple | {apples} apples",
+    "projectsSample": "You have a single project | You have multiple projects"
+}

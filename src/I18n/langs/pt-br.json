@@ -1,0 +1,11 @@
+{
+    "language_name": "Português (Brasil)",
+    "intro1": "I18n é realmente simples. Funciona com objetos em arquivos JSON, que usam as próprias strings como índices, assim podemos preservar nosso código legível.",
+    "Translate strings in a simple way": "Traduza sua interface de forma simples",
+    "Choose your language": "Escolha sua linguagem",
+    "Amount of apples": "Número de maçãs",
+    "Amount of projects": "Número de projetos",
+    "applesSample": "Nenhuma maçã | Uma maçã | {apples} maçãs",
+    "projectsSample": "Você tem um único projeto | Você tem múltiplos projetos",
+    "Result": "Resultado"
+}
