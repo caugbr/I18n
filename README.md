@@ -20,7 +20,7 @@ I18n should be added at the moment you start Vue (commonly in 'main.js')
         render:  h  =>  h(App)
     }).$mount('#app')
 
-After that, all components will have the property `this.$i18n` to access the object directly, but the mixin object adds everything you'll need to use I18n in your components.
+After that, all components will have the property `this.$i18n` that allows to access the object directly, but the mixin object adds everything you'll need to use I18n in your components.
 
 Than you can save your JSON language files under `[...]/I18n/langs`, using the language codes as file names, with the extension `.json`. The system expects the codes to be lower case and use dashes to separate the parts, when it's necessary. Some examples: `en.json`, `es.json`, `pt-br.json`. These files should have the item "language_name" containing the legible name of the translation language.
 
