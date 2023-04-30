@@ -15,9 +15,9 @@ I18n should be added at the moment you start Vue (commonly in 'main.js')
     
     Vue.config.productionTip = false
 
-    new  Vue({
+    new Vue({
         store,
-        render:  h  =>  h(App)
+        render: h => h(App)
     }).$mount('#app')
 
 After that, all components will have the property `this.$i18n` that allows to access the object directly, but the mixin object adds everything you'll need to use I18n in your components.
@@ -65,17 +65,17 @@ Take a look at the translation files used in the example page. Note that, as eng
 ### Using in a component
 The functions added by `I18nMixin` will be present in all components, so you just need to use it. The code below uses two functions, `t('string')`, that translates a string and `tp('string', variables)`, if you want to use plural forms based on a sent variable (the first number present in variables object).
 
-    <div  class="formline">
-        <label  for="apples">{{  t('Amount of projects') }}</label>
-        <select  id="apples"  v-model.number="projects">
-            <option  value="1">1</option>
-            <option  value="5">5</option>
-            <option  value="10">10</option>
+    <div class="formline">
+        <label for="apples">{{ t('Amount of projects') }}</label>
+        <select id="apples" v-model.number="projects">
+            <option value="1">1</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
         </select>
     </div>
-    <div  class="formline">
-        <label>{{  t('Result') }}</label>
-        <div  class="result">{{  tp('projectsSample', { projects }) }}</div>
+    <div class="formline">
+        <label>{{ t('Result') }}</label>
+        <div class="result">{{ tp('projectsSample', { projects }) }}</div>
     </div>
 
 ### Changing the interface language
@@ -86,14 +86,14 @@ First set the store variables and functions.
 
 **store/index.js**
 
-    import  Vue  from  'vue'
-    import  Vuex  from  'vuex'
+    import Vue from 'vue'
+    import Vuex from 'vuex'
       
     Vue.use(Vuex)
       
-    export  default  new  Vuex.Store({
+    export default new Vuex.Store({
         state: {
-            language:  'en'
+            language: 'en'
         },
         mutations: {
             SET_LANGUAGE(state, lng) {
@@ -111,8 +111,8 @@ All the interaction with Vuex will be done in App.vue. `changeLang()` sets the g
 
 **App.vue**
 
-    export  default {
-        name:  'App',
+    export default {
+        name: 'App',
         components: {
             // this component receives the computed value 'languages' and
             // display a select that triggers the method changeLang() on change
@@ -120,13 +120,13 @@ All the interaction with Vuex will be done in App.vue. `changeLang()` sets the g
         },
         data() {
             return {
-                apples:  0,
-                projects:  1
+                apples: 0,
+                projects: 1
             }
         },
         computed: {
             languages() {
-                return  this.getLangs();
+                return this.getLangs();
             }
         },
         methods: {
